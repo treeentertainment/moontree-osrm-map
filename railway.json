@@ -1,8 +1,0 @@
-{
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "deploy": {
-    "command": "osrm-routed --algorithm mld /data/map.osrm"
-  }
-}
