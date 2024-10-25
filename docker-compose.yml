@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  osrm:
+    image: osrm/osrm-backend
+    volumes:
+      - ./south-korea-latest.osm.pbf:/data/map.pbf  # Mount your PBF file
+    command: osrm-routed --algorithm mld /data/map.osrm  # Custom start command
+    build:
+      context: .
+      dockerfile: Dockerfile  # If you want to build from Dockerfile
